@@ -59,9 +59,19 @@
                                 <dt>Produto</dt>
                                 <dd><?= $_POST['nome'] ?></dd>
                                 <dt>Preço</dt>
-                                <dd>R$ <?= $_POST['preco'] ?></dd>
+                                <dd	id="preco">R$	<?=	$_POST["preco"]	?></dd>
 
                             </dl>
+                        <div	class="form-group">
+                            <label	for="qt">Quantidade</label>
+                            <input	id="qt" class="form-control" type="number" min="0" max="99" value="1">
+                        </div>
+                        <div	class="form-group">
+					        <label	for="total">Total</label>
+					        <output	for="qt	preco" id="total" class="form-control">
+					            <?=	$_POST["preco"]	?>
+                            </output>
+                        </div>
                         </div><!--	fim	.panel-body	-->
                     </div><!--	fim	.panel	-->
                 </div>
@@ -125,7 +135,7 @@
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
-
+    <script src="js/total.js"></script>
 </body>
 
 </html>

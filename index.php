@@ -47,7 +47,7 @@
                 <h2>Novidades</h2>
                 <ol>
                     <li>
-                        <a	href="produto.html">
+                        <a	href="produto.php">
                             <figure>
                                 <img	src="img/produtos/miniatura1.png">
                                 <figcaption>Fuzz	Cardigan	por	R$	129,90</figcaption>
@@ -55,7 +55,7 @@
                         </a>
                     </li>
                     <li>
-                        <a	href="produto.html">
+                        <a	href="produto.php">
                             <figure>
                                 <img	src="img/produtos/miniatura2.png">
                                 <figcaption>Fuzz	Cardigan	por	R$	129,90</figcaption>
@@ -152,5 +152,6 @@
         </div>
     </body>
     <?php	include("footer.php");	?>
+    <script src="js/rotativo.js"></script>
 
 </html>
