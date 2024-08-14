@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <?php include ("cabecalho.php"); ?>
+    <?php include("cabecalho.php"); ?>
     <div class="container	destaque">
         <section class="busca">
             <h2>Busca</h2>
@@ -49,211 +49,48 @@
         <section class="painel painel-compacto	novidades">
             <h2>Novidades</h2>
             <ol>
-                <li>
-                    <a href="produto.php?id=1">
-                        <figure>
-                            <img src="img/produtos/miniatura1.png">
-                            <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
-                        </figure>
-                    </a>
-                </li>
-                <li>
-                    <a href="produto.php?id=2">
-                        <figure>
-                            <img src="img/produtos/miniatura2.png">
-                            <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
-                        </figure>
-                    </a>
-                </li>
-                <li>
-                    <a href="produto.php?id=3">
-                        <figure>
-                            <img src="img/produtos/miniatura3.png">
-                            <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
-                        </figure>
-                    </a>
-                </li>
-                <li>
-                    <a href="produto.php?id=4">
-                        <figure>
-                            <img src="img/produtos/miniatura4.png">
-                            <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
-                        </figure>
-                    </a>
-                </li>
-                <li>
-                    <a href="produto.php?id=5">
-                        <figure>
-                            <img src="img/produtos/miniatura5.png">
-                            <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
-                        </figure>
-                    </a>
-                </li>
-                <li>
-                    <a href="produto.php?id=6">
-                        <figure>
-                            <img src="img/produtos/miniatura6.png">
-                            <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
-                        </figure>
-                    </a>
-                </li>
-                <li>
-                    <a href="produto.php">
-                        <figure>
-                            <img src="img/produtos/miniatura1.png">
-                            <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
-                        </figure>
-                    </a>
-                </li>
-                <li>
-                    <a href="produto.php">
-                        <figure>
-                            <img src="img/produtos/miniatura2.png">
-                            <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
-                        </figure>
-                    </a>
-                </li>
-                <li>
-                    <a href="produto.html">
-                        <figure>
-                            <img src="img/produtos/miniatura3.png">
-                            <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
-                        </figure>
-                    </a>
-                </li>
-                <li>
-                    <a href="produto.html">
-                        <figure>
-                            <img src="img/produtos/miniatura4.png">
-                            <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
-                        </figure>
-                    </a>
-                </li>
-                <li>
-                    <a href="produto.html">
-                        <figure>
-                            <img src="img/produtos/miniatura5.png">
-                            <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
-                        </figure>
-                    </a>
-                </li>
-                <li>
-                    <a href="produto.html">
-                        <figure>
-                            <img src="img/produtos/miniatura6.png">
-                            <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
-                        </figure>
-                    </a>
-                </li>
+                <?php
+                $conexao = mysqli_connect("127.0.0.1", "root", "", "WD43");
+                $dados = mysqli_query($conexao, "SELECT	*	FROM	produtos ORDER BY data DESC limit 0,9");
+                while ($produto = mysqli_fetch_array($dados)):
+                    ?>
+                    <li>
+                        <a href="produto.php?id=<?= $produto['id'] ?>">
+                            <figure>
+                                <img src="img/produtos/miniatura<?= $produto['id'] ?>.png" alt="<?= $produto['nome'] ?>">
+                                <figcaption><?= $produto['nome'] ?> por <?= $produto['preco'] ?></figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                <?php endwhile; ?>
             </ol>
             <button type="button">Mostra mais</button>
         </section>
         <section class="painel painel-compacto	mais-vendidos">
             <h2>Mais Vendidos</h2>
             <ol>
-                <li>
-                    <a href="produto.php?id=7">
-                        <figure>
-                            <img src="img/produtos/miniatura7.png">
-                            <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
-                        </figure>
-                    </a>
-                </li>
-                <li>
-                    <a href="produto.php?id=8">
-                        <figure>
-                            <img src="img/produtos/miniatura8.png">
-                            <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
-                        </figure>
-                    </a>
-                </li>
-                <li>
-                    <a href="produto.php?id=9">
-                        <figure>
-                            <img src="img/produtos/miniatura9.png">
-                            <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
-                        </figure>
-                    </a>
-                </li>
-                <li>
-                    <a href="produto.php?id=10">
-                        <figure>
-                            <img src="img/produtos/miniatura10.png">
-                            <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
-                        </figure>
-                    </a>
-                </li>
-                <li>
-                    <a href="produto.php?id=11">
-                        <figure>
-                            <img src="img/produtos/miniatura11.png">
-                            <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
-                        </figure>
-                    </a>
-                </li>
-                <li>
-                    <a href="produto.php?id=12">
-                        <figure>
-                            <img src="img/produtos/miniatura12.png">
-                            <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
-                        </figure>
-                    </a>
-                </li>
-                <li>
-                    <a href="produto.html">
-                        <figure>
-                            <img src="img/produtos/miniatura7.png">
-                            <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
-                        </figure>
-                    </a>
-                </li>
-                <li>
-                    <a href="produto.html">
-                        <figure>
-                            <img src="img/produtos/miniatura8.png">
-                            <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
-                        </figure>
-                    </a>
-                </li>
-                <li>
-                    <a href="produto.html">
-                        <figure>
-                            <img src="img/produtos/miniatura9.png">
-                            <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
-                        </figure>
-                    </a>
-                </li>
-                <li>
-                    <a href="produto.html">
-                        <figure>
-                            <img src="img/produtos/miniatura10.png">
-                            <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
-                        </figure>
-                    </a>
-                </li>
-                <li>
-                    <a href="produto.html">
-                        <figure>
-                            <img src="img/produtos/miniatura11.png">
-                            <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
-                        </figure>
-                    </a>
-                </li>
-                <li>
-                    <a href="produto.html">
-                        <figure>
-                            <img src="img/produtos/miniatura12.png">
-                            <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
-                        </figure>
-                    </a>
-                </li>
+                <?php
+                $conexao = mysqli_connect("127.0.0.1", "root", "", "WD43");
+                $dados = mysqli_query($conexao, "SELECT	*	FROM	produtos ORDER BY vendas DESC limit 0,9");
+                while ($produto = mysqli_fetch_array($dados)):
+                    ?>
+                    <li>
+                        <a href="produto.php?id=<?= $produto['id'] ?>">
+                            <figure>
+                                <img src="img/produtos/miniatura<?= $produto['id'] ?>.png" alt="<?= $produto['nome'] ?>">
+                                <figcaption><?= $produto['nome'] ?> por <?= $produto['preco'] ?></figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                <?php endwhile; ?>
             </ol>
             <button type="button">Mostra mais</button>
         </section>
     </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/rotativo.js"></script>
 </body>
-<?php include ("footer.php"); ?>
-<script src="js/jquery.js"></script>
-<script src="js/rotativo.js"></script>
+<?php include("footer.php"); ?>
 
 </html>
