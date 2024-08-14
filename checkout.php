@@ -82,7 +82,7 @@
                         <legend>Dados pessoais</legend>
                         <div class="form-group">
                             <label for="nome">Nome completo</label>
-                            <input type="text" class="form-control" id="nome" name="nome" autofocus>
+                            <input type="text" class="form-control" id="nome" name="nome" autofocus required>
                         </div>
                         <div class="form-group">
                             <div class="form-group">
@@ -96,7 +96,7 @@
                         </div>
                         <div class="form-group">
                             <label for="cpf">CPF</label>
-                            <input type="text" class="form-control" id="cpf" name="cpf" placeholder="000.000.000-00">
+                            <input type="text" class="form-control" id="cpf" name="cpf" placeholder="000.000.000-00" data-mask="999.999.999-99" required>
                         </div>
                         <div class="checkbox">
                             <label>
@@ -109,7 +109,7 @@
                         <legend>Cartão de crédito</legend>
                         <div class="form-group">
                             <label for="numero-cartao">Número - CVV</label>
-                            <input type="text" class="form-control" id="numero-cartao" name="numero-cartao">
+                            <input data-mask="9999	9999	9999	9999	-	999" type="text" class="form-control" id="numero-cartao" name="numero-cartao">
                         </div>
                         <div class="form-group">
                             <label for="bandeira-cartao">Bandeira</label>
@@ -135,6 +135,7 @@
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script	src="js/inputmask-plugin.js"></script>
     <script src="js/total.js"></script>
 </body>
 
