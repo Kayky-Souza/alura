@@ -4,14 +4,15 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="css/mobile.css" media="(max-width:	939px)">
     <title>Mirror Fashion</title>
     <link rel="stylesheet" href="css/reset.css">
     <link href='http://fonts.googleapis.com/css?family=PT+Sans|Bad+Script' rel='stylesheet'>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/mobile.css" media="(max-width:	939px)">
 </head>
 
 <body>
+    <div class="bg">
     <?php include("cabecalho.php"); ?>
     <div class="container	destaque">
         <section class="busca">
@@ -46,7 +47,7 @@
     </div><!--	fim	.container	.destaque	-->
 
     <div class="container	paineis">
-        <section class="painel painel-compacto	novidades">
+        <section class="painel	novidades">
             <h2>Novidades</h2>
             <ol>
                 <?php
@@ -64,9 +65,10 @@
                     </li>
                 <?php endwhile; ?>
             </ol>
-            <button type="button">Mostra mais</button>
+            <button class="mais" type="button">Mostra mais</button>
         </section>
-        <section class="painel painel-compacto	mais-vendidos">
+        
+        <section class="painel	mais-vendidos">
             <h2>Mais Vendidos</h2>
             <ol>
                 <?php
@@ -84,13 +86,15 @@
                     </li>
                 <?php endwhile; ?>
             </ol>
-            <button type="button">Mostra mais</button>
+            <button class="mais" type="button">Mostra mais</button>
         </section>
+    </div>
+    <?php include("footer.php"); ?>
     </div>
 
     <script src="js/jquery.js"></script>
     <script src="js/rotativo.js"></script>
 </body>
-<?php include("footer.php"); ?>
+
 
 </html>

@@ -235,17 +235,19 @@ footer .container {
     background-image: url(../img/googleplus.png);
 }
 
-.painel button {
+/* .painel button {
     display: none;
-}
+} */
+ /* esta comentado para implementar a funcao de mostrar menos no botao */
 
 .painel-compacto li:nth-child(n+7) {
     display: none;
 }
 
-.painel-compacto button {
+/* .painel-compacto button {
     display: block;
-}
+} */
+ /* aqui tambem mostrar menos */
 
 .painel button {
     /*	posicionamento	*/
@@ -302,4 +304,7 @@ body	{
 .painel h2	{
     font-family: 'Bad Script',	sans-serif;
 }
-
+.bg{
+    background-color: #ccc;
+    height: auto;
+}

@@ -7,12 +7,38 @@ function trocaBanner() {
 setInterval(trocaBanner, 4000);
 
 $('.novidades').addClass('painel-compacto');
+$('.mais-vendidos').addClass('painel-compacto');
 
-$('.novidades	button').click(function() {
-	$('.novidades').removeClass('painel-compacto');
+$(document).ready(function() {
+    // Delegação de eventos para o clique em qualquer botão dentro de .novidades
+    $('.novidades').on('click', 'button.mais', function() {
+        $('.novidades').removeClass('painel-compacto');
+        $(this).text('Mostrar Menos')
+               .addClass('menos')
+               .removeClass('mais');
+    });
+
+    $('.novidades').on('click', 'button.menos', function() {
+        $('.novidades').addClass('painel-compacto');
+        $(this).text('Mostrar Mais')
+               .addClass('mais')
+               .removeClass('menos');
+    });
 });
 
-$('.mais-vendidos	button').click(function() {
-	$('.mais-vendidos').removeClass('painel-compacto');
-});
+$(document).ready(function() {
+    // Delegação de eventos para o clique em qualquer botão dentro de .mais-vendidos
+    $('.mais-vendidos').on('click', 'button.mais', function() {
+        $('.mais-vendidos').removeClass('painel-compacto');
+        $(this).text('Mostrar Menos')
+               .addClass('menos')
+               .removeClass('mais');
+    });
 
+    $('.mais-vendidos').on('click', 'button.menos', function() {
+        $('.mais-vendidos').addClass('painel-compacto');
+        $(this).text('Mostrar Mais')
+               .addClass('mais')
+               .removeClass('menos');
+    });
+});
