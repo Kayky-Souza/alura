@@ -7,7 +7,7 @@
     <title>Mirror Fashion</title>
     <link rel="stylesheet" href="css/reset.css">
     <link href='http://fonts.googleapis.com/css?family=PT+Sans|Bad+Script' rel='stylesheet'>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet/less" href="less/estilos.less">
     <link rel="stylesheet" href="css/mobile.css" media="(max-width:	939px)">
 </head>
 
@@ -94,6 +94,7 @@
 
     <script src="js/jquery.js"></script>
     <script src="js/rotativo.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/less" ></script>
 </body>
 
 
